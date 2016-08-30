@@ -22,6 +22,7 @@
         vm.logout = logout;
         vm.toggleNavbar = toggleNavbar;
         vm.collapseNavbar = collapseNavbar;
+        vm.game = game;
         vm.$state = $state;
 
         function login() {
@@ -41,6 +42,11 @@
 
         function collapseNavbar() {
             vm.isNavbarCollapsed = true;
+        }
+
+        function game() {
+            collapseNavbar();
+            console.log("hello game");
         }
     }
 })();
